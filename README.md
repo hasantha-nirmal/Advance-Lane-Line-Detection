@@ -13,7 +13,6 @@ This basically consist of few steps(respectively)
 7.	Warp the detected lane boundaries back onto the original image.
 8.	Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-# All these steps are well defined with the code in ‘description.Ipynb’
 
 •	First, we have to correct camera distortions, which are most likely to occur in corners, otherwise the distorted image gives false inputs.
 
