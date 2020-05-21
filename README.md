@@ -29,6 +29,20 @@ This basically consist of few steps(respectively)
 
 •	After this perspective transformation we detect lane pixels and fit to find the lane boundary.
 
+  The left and right base points are calculated from the histogram.
+  
+  We then calculate the position of all non zero x and non zero y pixels.
+  
+  We then Start iterating over the windows where we start from points calculate.
+  
+  We then identify the non zero pixels in the window we just defined.
+  
+  We then collect all the indices in the list and decide the center of next window using these points.
+  
+  Once we are done, we seperate the points to left and right positions.
+  
+  We then fit a second degree polynomial using np.polyfit
+
 •	Then we determine the curvature of the lane and vehicle position with respect to center.
 
 •	After detecting the perfect polynomial curves for both left and right lanes, using the inverse matrix of the perspective transformation, we paste these 2 polynomials back to the original image.
